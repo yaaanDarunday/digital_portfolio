@@ -1,0 +1,75 @@
+:root {
+    --main-ff: "Roboto Serif", serif;
+    --sub-ff: 'Roboto', sans-serif;
+    --logo-ff: 'Italiana', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Tablet Size */
+@media (min-width: 426px) and (max-width: 768px){
+    
+}
+
+
+/* Laptop Size */
+@media (min-width: 769px){
+    @keyframes changeBg {
+        0% {
+            background-image: url('./images/hero-image1.svg');
+        }
+        33% {
+            background-image: url('./images/hero-image2.svg');
+        }
+        66% {
+            background-image: url('./images/hero-image3.svg');
+        }
+        100% {
+            background-image: url('./images/hero-image1.svg');
+        }
+    }
+
+    .hero {
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+    }
+
+    .gradient-glass {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        position: absolute;
+        opacity: 100%;
+        z-index: 0;
+    }
+
+    .changing-bg {
+        width: 100vw;
+        height: 100vh;
+        animation: changeBg 15s infinite;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: background-image 2s ease-in-out;
+        opacity: 0.2;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .logo-name {
+        color: #FFFFFF;
+        font-size: 100px;
+        text-align: center;
+        z-index: 2;
+        opacity: 1;
+        position: relative;
+    }
+
+    
+}
