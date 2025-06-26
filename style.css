@@ -13,6 +13,8 @@
 
 html, body {
     overflow-x: hidden;
+    width: 100%;
+    height: 100%;
 }
 
 .first-day,
@@ -30,9 +32,642 @@ h2, h3, .date {
     color: var(--primary-color);
 }
 
+/* Mobile Size (Default) */
+@media (max-width: 425px) {
+    p, h1, h2, h3 {
+        font-family: var(--main-ff);
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    /* Hero Section */
+    .hero {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .gradient-glass {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        position: absolute;
+        opacity: 1;
+        z-index: 0;
+    }
+
+    .changing-bg {
+        display: none;
+    }
+
+    .logo-name {
+        color: #FFFFFF;
+        padding-top: 15px;
+        margin-bottom: 30px;
+        font-family: var(--logo-ff);
+        font-size: 20px;
+        text-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+        text-align: center;
+        z-index: 2;
+        position: relative;
+    }
+
+    .hero-contents {
+        width: 90%;
+        height: 80vh;
+        margin: auto;
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .hero-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+    }
+
+    .hero-heading-top {
+        width: 280px;
+        margin: -40px auto 0px auto;
+        z-index: 3;
+    }
+
+    .hero-heading-bottom {
+        width: 150px;
+        margin: -40px auto 0px auto;
+        z-index: 2;
+    }
+
+    /* Photo Cards */
+    .photo-card {
+        position: relative;
+        margin: 10px auto;
+        z-index: 1;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .day-tag {
+        width: 100px;
+        padding: 3px 6px;
+        text-align: center;
+        border: 2px solid #FAEFD9;
+        border-radius: 8px;
+        background-color: #FFD6BA;
+        z-index: 2;
+        position: relative;
+        margin-bottom: 10px;
+    }
+
+    .day-tag > p {
+        color: var(--primary-color);
+        font-size: 16px;
+        font-weight: 800;
+        opacity: 0.6;
+    }
+    
+    .day1-img, .day2-img, .day3-img, .day4-img, .day5-img, .day6-img {
+        width: 200px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    /* Day Sections */
+    .section {
+        padding: 20px;
+        width: 100%;
+    }
+
+    /* First Day */
+    .first-day {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .first-day1, .first-day2, .first-day3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .first-day1 > img, .first-day2 > img, .first-day3 > img {
+        width: 250px;
+        margin-bottom: 15px;
+    }
+
+    .first-day1 > p, .first-day3 > p {
+        width: 100%;
+        padding: 20px;
+        border-radius: 15px;
+        background-color: var(--card-bg-color);
+    }
+
+    .first-day-title > h2 {
+        font-size: 40px;
+        font-weight: 700;
+        margin-bottom: 0;
+    }
+
+    .first-day-title > h3 {
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .first-day-title > p {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    /* Second Day */
+    .second-day {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .second-day-left, .second-day-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .second-day-left > img, .second-day-right > img {
+        width: 250px;
+        margin-bottom: 15px;
+    }
+
+    .second-day-left > p {
+        width: 100%;
+        padding: 20px;
+        border-radius: 15px;
+        background-color: var(--card-bg-color);
+        margin: 0;
+    }
+
+    .second-day-right > p {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .second-day-title {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    /* Third Day */
+    .third-day {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .third-day-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .third-day-right > img {
+        width: 250px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .third-day-left > p {
+        width: 100%;
+        padding: 20px;
+        border-radius: 15px;
+        background-color: var(--card-bg-color);
+        margin: 10px 0;
+    }
+
+    /* Fourth Day */
+    .fourth-day {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        position: relative;
+        padding-bottom: 40px;
+    }
+
+    .fourth-day-text {
+        width: 100%;
+        padding: 20px;
+        position: relative;
+        text-align: center;
+    }
+
+    .fourth-day-image1 {
+        width: 250px;
+        margin: 0 auto 20px;
+        display: block;
+    }
+
+    .fourth-day-image2, .fourth-day-image3 {
+        width: 120px;
+        position: static;
+        margin: 10px auto;
+        display: block;
+    }
+
+    .day-four-context {
+        width: 100%;
+        padding: 20px;
+        border-radius: 15px;
+        background-color: var(--card-bg-color);
+        margin: 10px 0;
+        font-size: 16px;
+    }
+
+    /* Fifth and Sixth Day */
+    .fifth-six-day {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .fifth-bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .fifth-bottom-left > p {
+        width: 100%;
+        padding: 20px;
+        border-radius: 15px;
+        background-color: var(--card-bg-color);
+        margin: 10px 0;
+    }
+
+    .fifth-bottom-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fifth-bot-top, .fifth-bot-bot {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px 0;
+    }
+
+    .fifth-day-img1, .fifth-day-img2, .fifth-day-img3, .fifth-day-img4 {
+        width: 200px;
+        margin: 10px auto;
+    }
+}
+
 /* Tablet Size */
 @media (min-width: 426px) and (max-width: 768px) {
-    /* Add tablet styles here */
+    p, h1, h2, h3 {
+        font-family: var(--main-ff);
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    /* Hero Section */
+    .hero {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+    }
+
+    .gradient-glass {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        position: absolute;
+        opacity: 1;
+        z-index: 0;
+    }
+
+    .changing-bg {
+        width: 100%;
+        height: 100vh;
+        animation: changeBg 15s infinite;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: background-image 2s ease-in-out;
+        opacity: 0.2;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .logo-name {
+        color: #FFFFFF;
+        padding-top: 20px;
+        margin-bottom: 40px;
+        font-family: var(--logo-ff);
+        font-size: 22px;
+        text-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+        text-align: center;
+        z-index: 2;
+        position: relative;
+    }
+
+    .hero-contents {
+        width: 90%;
+        height: 80vh;
+        margin: auto;
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .hero-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+    }
+
+    .hero-heading-top {
+        width: 400px;
+        margin: -50px auto 0px auto;
+        z-index: 3;
+    }
+
+    .hero-heading-bottom {
+        width: 200px;
+        margin: -50px auto 0px auto;
+        z-index: 2;
+    }
+
+    /* Photo Cards */
+    .photo-card {
+        position: absolute;
+        z-index: 1;
+        transform: scale(0.8);
+    }
+
+    .day-tag {
+        width: 110px;
+        padding: 4px 8px;
+        text-align: center;
+        border: 3px solid #FAEFD9;
+        border-radius: 10px;
+        background-color: #FFD6BA;
+        z-index: 2;
+        position: relative;
+    }
+
+    .day-tag > p {
+        color: var(--primary-color);
+        font-size: 16px;
+        font-weight: 800;
+        opacity: 0.6;
+    }
+    
+    /* Day positions */
+    .day1 { top: 20px; left: 10%; }
+    .day2 { top: 20px; left: 40%; }
+    .day3 { top: 40px; right: 10%; }
+    .day4 { bottom: 40px; left: 15%; }
+    .day5 { bottom: 40px; left: 45%; }
+    .day6 { bottom: 40px; right: 10%; }
+
+    .tag1, .tag2, .tag3, .tag4, .tag5, .tag6 {
+        margin: 0px 0px -40px 100px;
+    }
+
+    .day1-img, .day2-img, .day3-img, .day4-img, .day5-img, .day6-img {
+        width: 180px;
+        margin-left: 50px;
+    }
+
+    /* Day Sections */
+    .section {
+        padding: 30px;
+    }
+
+    /* First Day */
+    .first-day {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .first-day1, .first-day3 {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .first-day2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .first-day1 > img, .first-day2 > img, .first-day3 > img {
+        width: 300px;
+    }
+
+    .first-day1 > p, .first-day3 > p {
+        width: calc(100% - 320px);
+        padding: 20px;
+        border-radius: 15px;
+        background-color: var(--card-bg-color);
+    }
+
+    .first-day-title {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .first-day-title > h2 {
+        font-size: 50px;
+        font-weight: 700;
+        margin-bottom: -5px;
+    }
+
+    .first-day-title > h3 {
+        font-size: 28px;
+        font-weight: 700;
+    }
+
+    .first-day-title > p {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    /* Second Day */
+    .second-day {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    .second-day-left, .second-day-right {
+        width: 50%;
+    }
+
+    .second-day-left > img, .second-day-right > img {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto 20px;
+        display: block;
+    }
+
+    .second-day-left > p {
+        width: 100%;
+        padding: 20px;
+        border-radius: 15px;
+        background-color: var(--card-bg-color);
+    }
+
+    .second-day-right > p {
+        width: 100%;
+        padding: 20px;
+    }
+
+    /* Third Day */
+    .third-day {
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .third-day-left {
+        width: 60%;
+    }
+
+    .third-day-right {
+        width: 40%;
+    }
+
+    .third-day-left > p {
+        width: 90%;
+        padding: 20px;
+        border-radius: 15px;
+        background-color: var(--card-bg-color);
+    }
+
+    .third-day-right > img {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    /* Fourth Day */
+    .fourth-day {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding-bottom: 50px;
+    }
+
+    .fourth-day-text {
+        width: 100%;
+        padding: 30px;
+        position: relative;
+        text-align: center;
+    }
+
+    .fourth-day-image1 {
+        width: 80%;
+        max-width: 500px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .fourth-day-image2, .fourth-day-image3 {
+        width: 150px;
+        position: absolute;
+    }
+
+    .fourth-day-image2 {
+        top: 20px;
+        right: 20px;
+    }
+
+    .fourth-day-image3 {
+        bottom: 20px;
+        left: 20px;
+    }
+
+    .day-four-context {
+        width: 80%;
+        max-width: 450px;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 15px;
+        background-color: var(--card-bg-color);
+    }
+
+    /* Fifth and Sixth Day */
+    .fifth-six-day {
+        padding: 30px;
+    }
+
+    .fifth-bottom {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .fifth-bottom-left {
+        width: 40%;
+    }
+
+    .fifth-bottom-right {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fifth-bottom-left > p {
+        width: 100%;
+        padding: 20px;
+        border-radius: 15px;
+        background-color: var(--card-bg-color);
+    }
+
+    .fifth-bot-top, .fifth-bot-bot {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .fifth-bot-bot {
+        margin-top: -50px;
+    }
+
+    .fifth-day-img1, .fifth-day-img2, .fifth-day-img3, .fifth-day-img4 {
+        width: 200px;
+    }
 }
 
 /* Laptop Size */
