@@ -274,20 +274,20 @@ html,body {
     }
 
     .day-four {
-        font-size: 95px;
+        font-size: 70px;
         font-weight: 700;
         color: #EA5701;
         margin-bottom: -20px;
     }
 
     .day-four-loc {
-        font-size: 42px;
+        font-size: 32px;
         font-weight: 700;
         color: #EA5701;
     }
 
     .day-four-date {
-        font-size: 24px;
+        font-size: 22px;
         font-weight: 600;
         color: #EA5701;
         margin-bottom: 19px;
@@ -296,5 +296,6 @@ html,body {
     .day-four-context {
         font-size: 18px;
         font-weight: 500;
+        width: 550px;
     }
 }
