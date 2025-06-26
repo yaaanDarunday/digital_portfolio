@@ -1,7 +1,6 @@
 :root {
-    --main-ff: "Roboto Serif", serif;
-    --sub-ff: 'Roboto', sans-serif;
-    --logo-ff: 'Italiana', sans-serif;
+    --main-ff: "Montserrat", sans-serif;
+    --logo-ff: 'Sarina', sans-serif;
 }
 
 * {
@@ -33,6 +32,10 @@
             background-image: url('./images/hero-image1.svg');
         }
     }
+    p {
+        font-family: var(--main-ff);
+    }
+
 
     .hero {
         width: 100vw;
@@ -64,12 +67,163 @@
 
     .logo-name {
         color: #FFFFFF;
-        font-size: 100px;
+        padding-top: 25px;
+        margin-bottom: 60px;
+        font-family: var(--logo-ff);
+        font-size: 25px;
+        text-shadow: 0 2.46px 2.46px rgba(0, 0, 0, 0.25);
         text-align: center;
         z-index: 2;
         opacity: 1;
         position: relative;
     }
 
+    .hero-contents {
+        /* outline: 1px solid lime; */
+        width: 80vw;
+        height: 80vh;
+        margin: auto;
+        position: relative;
+        z-index: 2;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .hero-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+    }
+
+    .hero-heading-top {
+        width: 600px;
+        margin: 0 auto -60px auto;
+        z-index: 3;
+    }
+
+    .hero-heading-bottom {
+        width: 300px;
+        margin: -25px auto 0px auto;
+        z-index: 2;
+    }
+
+    .photo-card {
+        position: absolute;
+        z-index: 1;
+    }
+
+    .day-tag {
+        width: 120px;
+        padding: 9px 20px;
+        text-align: center;
+        border: 3px solid #FAEFD9;
+        border-radius: 10px;
+        background-color: #FFCEEB;
+        z-index: 2;
+        position: relative;
+    }
+
+    .day-tag > p {
+        color: #EA5701;
+        font-size: 21px;
+        font-weight: 800;
+    }
     
+    .day1 {
+        top: 0px;
+    }
+
+    .tag1 {
+        margin: 0px 0px -80px 180px;
+    }
+
+    .day1-img {
+        margin-left: 40px;
+        width: 350px;
+        z-index: 1;
+        position: relative;
+    }
+
+    .day2 {
+        top: 0px;
+        left: 30%;
+    }
+
+    .tag2 {
+        margin: -25px 0px -60px 180px;
+    }
+
+    .day2-img {
+        margin-left: 100px;
+        width: 250px;
+        z-index: 1;
+        position: relative;
+    }
+
+    .day3 {
+        top: 35px;
+        right: 70px;
+    }
+
+    .tag3 {
+        margin: -25px 0px -60px 180px;
+    }
+
+    .day3-img {
+        margin-left: 100px;
+        width: 350px;
+        z-index: 1;
+        position: relative;
+    }
+
+    .day4 {
+        bottom: 0px;
+        left: 70px;
+    }
+
+    .tag4 {
+        margin: 0px 0px -220px 50px;
+    }
+
+    .day4-img {
+        margin-left: 100px;
+        width: 250px;
+        z-index: 1;
+        position: relative;
+    }
+
+    .day5 {
+        bottom: -10px;
+        right: 400px;
+    }
+
+    .tag5 {
+        margin: 0px 0px -240px 50px;
+    }
+
+    .day5-img {
+        margin-left: 100px;
+        width: 250px;
+        z-index: 1;
+        position: relative;
+    }
+
+    .day6 {
+        bottom: -10px;
+        right: 50px;
+    }
+
+    .tag6 {
+        margin: 0px 0px -90px 250px;
+    }
+
+    .day6-img {
+        margin-left: 100px;
+        width: 300px;
+        z-index: 1;
+        position: relative;
+    }
 }
