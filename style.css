@@ -9,6 +9,15 @@
     padding: 0;
 }
 
+html,body {
+    overflow-x: hidden;
+}
+
+.fourth-day {
+    overflow-x: hidden;
+}
+
+
 
 /* Tablet Size */
 @media (min-width: 426px) and (max-width: 768px){
@@ -32,7 +41,7 @@
             background-image: url('./images/hero-image1.svg');
         }
     }
-    p {
+    p,h1,h2 {
         font-family: var(--main-ff);
     }
 
@@ -225,5 +234,67 @@
         width: 300px;
         z-index: 1;
         position: relative;
+    }
+
+    /* FOURTH DAY */
+    .fourth-day {
+        width: 100vw;
+        height: 100vh;
+        background-color: #FFCEEB;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .fourth-day-text {
+        width: 40%;
+        padding: 50px 90px;
+        position: relative;
+    }
+
+    .fourth-day-image1 {
+        width: 60%;
+        transform: translateX(130px);
+    }
+
+    .fourth-day-image2 {
+        width: 250px;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: -400px;
+        z-index: 2;
+    }
+
+    .fourth-day-image3 {
+        width: 400px;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 250px;
+    }
+
+    .day-four {
+        font-size: 95px;
+        font-weight: 700;
+        color: #EA5701;
+        margin-bottom: -20px;
+    }
+
+    .day-four-loc {
+        font-size: 42px;
+        font-weight: 700;
+        color: #EA5701;
+    }
+
+    .day-four-date {
+        font-size: 24px;
+        font-weight: 600;
+        color: #EA5701;
+        margin-bottom: 19px;
+    }
+
+    .day-four-context {
+        font-size: 18px;
+        font-weight: 500;
     }
 }
