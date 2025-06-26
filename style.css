@@ -266,10 +266,10 @@ html,body {
     }
 
     .fourth-day-image3 {
-        width: 400px;
+        width: 350px;
         display: block;
         position: absolute;
-        bottom: 0;
+        bottom: 0px;
         left: 250px;
     }
 
