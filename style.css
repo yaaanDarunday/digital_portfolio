@@ -3,6 +3,8 @@
     --logo-ff: 'Sarina', sans-serif;
     --primary-color: #5D0246;
     --card-bg-color: #FFDCDC;
+    --section-padding: 15px;
+    --card-border-radius: 15px;
 }
 
 * {
@@ -43,6 +45,11 @@ h2, h3, .date {
         line-height: 1.4;
     }
 
+    .main {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
     /* Hero Section */
     .hero {
         width: 100%;
@@ -67,7 +74,7 @@ h2, h3, .date {
     .logo-name {
         color: #FFFFFF;
         padding-top: 15px;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
         font-family: var(--logo-ff);
         font-size: 20px;
         text-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
@@ -92,30 +99,38 @@ h2, h3, .date {
         flex-direction: column;
         justify-content: center;
         margin: auto;
+        text-align: center;
     }
 
     .hero-heading-top {
-        width: 280px;
+        width: 90%;
+        max-width: 280px;
         margin: -40px auto 0px auto;
         z-index: 3;
     }
 
     .hero-heading-bottom {
-        width: 150px;
+        width: 50%;
+        max-width: 150px;
         margin: -40px auto 0px auto;
         z-index: 2;
     }
 
-    /* Photo Cards */
+    /* Photo Cards - Make them visible but smaller on mobile */
     .photo-card {
-        position: relative;
-        margin: 10px auto;
+        position: absolute;
+        margin: 0;
         z-index: 1;
-        width: 80%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        transform: scale(0.6);
     }
+    
+    /* Position cards around the hero section */
+    .day1 { top: 10px; left: -30px; }
+    .day2 { top: 10px; right: -30px; }
+    .day3 { top: 40%; right: -40px; }
+    .day4 { bottom: 30%; left: -40px; }
+    .day5 { bottom: 10%; left: 50%; transform: translateX(-50%) scale(0.6); }
+    .day6 { bottom: 10%; right: -30px; }
 
     .day-tag {
         width: 100px;
@@ -136,16 +151,20 @@ h2, h3, .date {
         opacity: 0.6;
     }
     
+    .tag1, .tag2, .tag3, .tag4, .tag5, .tag6 {
+        margin: 0px 0px -20px 50px;
+    }
+    
     .day1-img, .day2-img, .day3-img, .day4-img, .day5-img, .day6-img {
-        width: 200px;
-        margin: 0 auto;
-        display: block;
+        width: 150px;
+        margin-left: 25px;
     }
 
     /* Day Sections */
     .section {
-        padding: 20px;
+        padding: var(--section-padding);
         width: 100%;
+        margin-bottom: 30px;
     }
 
     /* First Day */
@@ -164,30 +183,37 @@ h2, h3, .date {
     }
 
     .first-day1 > img, .first-day2 > img, .first-day3 > img {
-        width: 250px;
+        width: 90%;
+        max-width: 250px;
         margin-bottom: 15px;
+        object-fit: contain;
     }
 
     .first-day1 > p, .first-day3 > p {
         width: 100%;
-        padding: 20px;
-        border-radius: 15px;
+        padding: 15px;
+        border-radius: var(--card-border-radius);
         background-color: var(--card-bg-color);
     }
 
+    .first-day-title {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
     .first-day-title > h2 {
-        font-size: 40px;
+        font-size: 36px;
         font-weight: 700;
         margin-bottom: 0;
     }
 
     .first-day-title > h3 {
-        font-size: 24px;
+        font-size: 22px;
         font-weight: 700;
     }
 
     .first-day-title > p {
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 600;
         margin-bottom: 10px;
     }
@@ -205,24 +231,27 @@ h2, h3, .date {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        width: 100%;
     }
 
     .second-day-left > img, .second-day-right > img {
-        width: 250px;
+        width: 90%;
+        max-width: 250px;
         margin-bottom: 15px;
+        object-fit: contain;
     }
 
     .second-day-left > p {
         width: 100%;
-        padding: 20px;
-        border-radius: 15px;
+        padding: 15px;
+        border-radius: var(--card-border-radius);
         background-color: var(--card-bg-color);
         margin: 0;
     }
 
     .second-day-right > p {
         width: 100%;
-        padding: 20px;
+        padding: 15px;
     }
 
     .second-day-title {
@@ -244,18 +273,25 @@ h2, h3, .date {
         align-items: center;
         text-align: center;
         margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .third-day-right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
     .third-day-right > img {
-        width: 250px;
-        margin: 0 auto;
-        display: block;
+        width: 90%;
+        max-width: 250px;
+        object-fit: contain;
     }
 
     .third-day-left > p {
         width: 100%;
-        padding: 20px;
-        border-radius: 15px;
+        padding: 15px;
+        border-radius: var(--card-border-radius);
         background-color: var(--card-bg-color);
         margin: 10px 0;
     }
@@ -272,19 +308,21 @@ h2, h3, .date {
 
     .fourth-day-text {
         width: 100%;
-        padding: 20px;
+        padding: 15px;
         position: relative;
         text-align: center;
     }
 
     .fourth-day-image1 {
-        width: 250px;
+        width: 90%;
+        max-width: 250px;
         margin: 0 auto 20px;
         display: block;
+        object-fit: contain;
     }
 
     .fourth-day-image2, .fourth-day-image3 {
-        width: 120px;
+        width: 100px;
         position: static;
         margin: 10px auto;
         display: block;
@@ -292,8 +330,8 @@ h2, h3, .date {
 
     .day-four-context {
         width: 100%;
-        padding: 20px;
-        border-radius: 15px;
+        padding: 15px;
+        border-radius: var(--card-border-radius);
         background-color: var(--card-bg-color);
         margin: 10px 0;
         font-size: 16px;
@@ -301,7 +339,7 @@ h2, h3, .date {
 
     /* Fifth and Sixth Day */
     .fifth-six-day {
-        padding: 20px;
+        padding: 15px;
         text-align: center;
     }
 
@@ -312,15 +350,20 @@ h2, h3, .date {
         gap: 20px;
     }
 
+    .fifth-bottom-left {
+        width: 100%;
+    }
+
     .fifth-bottom-left > p {
         width: 100%;
-        padding: 20px;
-        border-radius: 15px;
+        padding: 15px;
+        border-radius: var(--card-border-radius);
         background-color: var(--card-bg-color);
         margin: 10px 0;
     }
 
     .fifth-bottom-right {
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -331,11 +374,14 @@ h2, h3, .date {
         flex-direction: column;
         align-items: center;
         margin: 10px 0;
+        width: 100%;
     }
 
     .fifth-day-img1, .fifth-day-img2, .fifth-day-img3, .fifth-day-img4 {
-        width: 200px;
+        width: 90%;
+        max-width: 200px;
         margin: 10px auto;
+        object-fit: contain;
     }
 }
 
@@ -407,6 +453,7 @@ h2, h3, .date {
         flex-direction: column;
         justify-content: center;
         margin: auto;
+        text-align: center;
     }
 
     .hero-heading-top {
@@ -678,6 +725,12 @@ h2, h3, .date {
         66% { background-image: url('./images/hero-image3.svg'); }
         100% { background-image: url('./images/hero-image1.svg'); }
     }
+    @keyframes changeBg {
+        0% { background-image: url('./images/hero-image1.svg'); }
+        33% { background-image: url('./images/hero-image2.svg'); }
+        66% { background-image: url('./images/hero-image3.svg'); }
+        100% { background-image: url('./images/hero-image1.svg'); }
+    }
     
     p, h1, h2, h3 {
         font-family: var(--main-ff);
@@ -745,6 +798,7 @@ h2, h3, .date {
         flex-direction: column;
         justify-content: center;
         margin: auto;
+        text-align: center;
     }
 
     .hero-heading-top {
