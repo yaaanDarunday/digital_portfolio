@@ -20,8 +20,12 @@ html,body {
 .first-day,
 .second-day,
 .third-day,
-.fourth-day {
-    background-color: #FFD6BA;
+.fourth-day,
+.fifth-six-day {
+    background-image: url("./images/background.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 h2, h3, .date {
@@ -56,6 +60,7 @@ h2, h3, .date {
     }
 
     p {
+        font-size: 18px;
         line-height: 1.5;
     }
 
@@ -121,14 +126,14 @@ h2, h3, .date {
     }
 
     .hero-heading-top {
-        width: 600px;
-        margin: 0 auto -60px auto;
+        width: 500px;
+        margin: -70px auto 0px auto;
         z-index: 3;
     }
 
     .hero-heading-bottom {
-        width: 300px;
-        margin: -25px auto 0px auto;
+        width: 250px;
+        margin: -70px auto 0px auto;
         z-index: 2;
     }
 
@@ -139,19 +144,20 @@ h2, h3, .date {
 
     .day-tag {
         width: 120px;
-        padding: 9px 20px;
+        padding: 4px 8px;
         text-align: center;
         border: 3px solid #FAEFD9;
         border-radius: 10px;
-        background-color: #FFCEEB;
+        background-color: #FFD6BA;
         z-index: 2;
         position: relative;
     }
 
     .day-tag > p {
-        color: #EA5701;
-        font-size: 21px;
+        color: #5D0246;
+        font-size: 18px;
         font-weight: 800;
+        opacity: 0.6;
     }
     
     .day1 {
@@ -159,12 +165,12 @@ h2, h3, .date {
     }
 
     .tag1 {
-        margin: 0px 0px -80px 180px;
+        margin: 0px 0px -80px 200px;
     }
 
     .day1-img {
-        margin-left: 40px;
-        width: 350px;
+        margin-left: 80px;
+        width: 300px;
         z-index: 1;
         position: relative;
     }
@@ -175,67 +181,67 @@ h2, h3, .date {
     }
 
     .tag2 {
-        margin: -25px 0px -60px 180px;
+        margin: -25px 0px -50px 180px;
     }
 
     .day2-img {
-        margin-left: 100px;
-        width: 250px;
+        margin-left: 125px;
+        width: 200px;
         z-index: 1;
         position: relative;
     }
 
     .day3 {
-        top: 35px;
-        right: 70px;
+        top: 45px;
+        right: 120px;
     }
 
     .tag3 {
-        margin: -25px 0px -60px 180px;
+        margin: -25px 0px -40px 150px;
     }
 
     .day3-img {
         margin-left: 100px;
-        width: 350px;
+        width: 250px;
         z-index: 1;
         position: relative;
     }
 
     .day4 {
-        bottom: 0px;
-        left: 70px;
+        bottom: 50px;
+        left: 80px;
     }
 
     .tag4 {
-        margin: 0px 0px -220px 50px;
+        margin: 0px 0px -160px 50px;
     }
 
     .day4-img {
         margin-left: 100px;
-        width: 250px;
+        width: 200px;
         z-index: 1;
         position: relative;
     }
 
     .day5 {
-        bottom: -10px;
+        bottom: 50px;
         right: 400px;
     }
 
     .tag5 {
-        margin: 0px 0px -240px 50px;
+        margin: 0px 0px -190px 50px;
     }
 
     .day5-img {
         margin-left: 100px;
-        width: 250px;
+        width: 200px;
         z-index: 1;
         position: relative;
     }
 
     .day6 {
-        bottom: -10px;
-        right: 50px;
+        bottom: 30px;
+        right: 75px;
     }
 
     .tag6 {
@@ -244,7 +250,7 @@ h2, h3, .date {
 
     .day6-img {
         margin-left: 100px;
-        width: 300px;
+        width: 250px;
         z-index: 1;
         position: relative;
     }
@@ -267,6 +273,9 @@ h2, h3, .date {
 
     .first-day1 > p {
         width: 600px;
+        padding: 30px;
+        border-radius: 20px;
+        background-color: #FFDCDC;
     }
 
     .first-day2 {
@@ -301,6 +310,9 @@ h2, h3, .date {
 
     .first-day3 > p {
         width: 600px;
+        padding: 30px;
+        border-radius: 20px;
+        background-color: #FFDCDC;
     }
 
     .first-day-title > h2 {
@@ -323,19 +335,27 @@ h2, h3, .date {
     .second-day {
         display: flex;
         align-items: center;
+        justify-content: center;
+        column-gap: 90px;
     }
 
     .second-day-right {
         height: 100%;
-        width: 745px;
-        background-color: #FFFFFF;
         padding: 50px;
+        background-color: #FFFFFF;
         margin-right: 75px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .second-day-right > img {
         width: 550px;
         height: 600px;
+    }
+
+    .second-day-right > p {
+        width: 550px;
     }
 
     .second-day-title > h2 {
@@ -352,18 +372,21 @@ h2, h3, .date {
     .second-day-title > p {
         font-size: 22px;
         font-weight: 600;
+        margin-bottom: 19px;
     }
 
     .second-day-left > img {
         width: 435px;
         display: block;
-        margin: 0 auto 35px auto;
+        margin: 0 0 35px 60px;
     }
 
     .second-day-left > p {
-        width: 500px;
-        margin: 50px;
-        padding: 20px 50px;
+        width: 400px;
+        margin-left: 90px;
+        padding: 30px;
+        border-radius: 20px;
+        background-color: #FFDCDC;
     }
 
     /* THIRD DAY */
@@ -371,7 +394,7 @@ h2, h3, .date {
         height: 100vh;
         width: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         padding: 30px 90px;
         overflow: hidden;
     }
@@ -386,6 +409,7 @@ h2, h3, .date {
         font-size: 70px;
         font-weight: 700;
         margin-bottom: -5px;
+        margin-top: 30px;
     }
 
     .third-day-title > h3 {
@@ -402,6 +426,9 @@ h2, h3, .date {
     .third-day-left > p {
         margin-bottom: 8px;
         width: 500px;
+        padding: 30px;
+        border-radius: 20px;
+        background-color: #FFDCDC;
     }
 
     .third-day-right > img {
@@ -431,7 +458,7 @@ h2, h3, .date {
     }
 
     .fourth-day-image2 {
-        width: 250px;
+        width: 200px;
         display: block;
         position: absolute;
         top: 0;
@@ -443,7 +470,7 @@ h2, h3, .date {
         width: 350px;
         display: block;
         position: absolute;
-        bottom: 0px;
+        bottom: -25px;
         left: 250px;
     }
 
@@ -468,5 +495,75 @@ h2, h3, .date {
         font-size: 18px;
         font-weight: 500;
         width: 550px;
+        padding: 30px;
+        border-radius: 20px;
+        background-color: #FFDCDC;
+    }
+
+    /* FIFTH AND SIXTH DAY */
+    .fifth-six-day {
+        width: 100%;
+        padding: 50px 90px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fifth-six-title > h2 {
+        font-size: 70px;
+        font-weight: 700;
+        margin-bottom: -20px;
+    }
+
+    .fifth-six-title > h3 {
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    .fifth-six-title > .date {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 19px;
+    }
+
+    .fifth-bottom {
+        display: flex;
+        column-gap: 100px;
+        align-items: center;
+    }
+
+    .fifth-bottom-left > p {
+        padding: 30px;
+        border-radius: 20px;
+        background-color: #FFDCDC;
+        width: 400px;
+    }
+
+    .fifth-bottom-right {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fifth-bot-top {
+        display: flex;
+    }
+
+    .fifth-bot-bot {
+        margin-top: -100px;
+        display: flex;
+    }
+
+    .fifth-day-img1,
+    .fifth-day-img2,
+    .fifth-day-img3,
+    .fifth-day-img4 {
+        width: 300px;
+    }
+
+    .fifth-day-img1 {
+        margin-right: -50px;
+    }
+    
+    .fifth-day-img3 {
+        margin-right: -50px;
     }
 }
