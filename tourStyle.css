@@ -28,6 +28,7 @@ html, body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    overflow-y: hidden;
 }
 
 h2, h3, .date {
@@ -860,6 +861,10 @@ h2, h3, .date {
         position: relative;
     }
 
+    .first-star1, .first-star2 {
+        position: absolute;
+    }
+
     /* Day 2 */
     .day2 {
         top: 0px;
@@ -951,6 +956,10 @@ h2, h3, .date {
         display: flex;
         flex-direction: column;
         padding: 24px 80px;
+    }
+
+    .first-day1, .first-day3 {
+        position: relative;
     }
 
     .first-day1 {
