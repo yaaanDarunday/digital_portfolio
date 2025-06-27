@@ -1,7 +1,7 @@
 :root {
     --main-ff: "Montserrat", sans-serif;
     --logo-ff: 'Sarina', sans-serif;
-    --primary-color: #5D0246;
+    --primary-color: #EF88AD;
     --card-bg-color: #FFDCDC;
 }
 
@@ -15,7 +15,7 @@ body {
     font-family: var(--main-ff);
     line-height: 1.6;
     color: #333;
-    background: linear-gradient(135deg, var(--primary-color) 0%, #8B0364 100%);
+    background: linear-gradient(135deg, var(--primary-color) 0%, #FCD8CD 100%);
     min-height: 100vh;
 }
 
@@ -195,7 +195,7 @@ section {
     position: absolute;
     width: 80px;
     height: 4px;
-    background: linear-gradient(45deg, var(--primary-color), #8B0364);
+    background: linear-gradient(45deg, var(--primary-color), #A53860);
     bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
@@ -218,7 +218,7 @@ section {
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--primary-color), #8B0364);
+    background: linear-gradient(135deg, var(--primary-color), #A53860);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -322,7 +322,7 @@ section {
 }
 
 .project-role {
-    background: linear-gradient(45deg, var(--primary-color), #8B0364);
+    background: linear-gradient(45deg, var(--primary-color), #EF88AD);
     color: white;
     padding: 0.3rem 1rem;
     border-radius: 20px;
