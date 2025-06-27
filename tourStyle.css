@@ -74,13 +74,20 @@ h2, h3, .date {
     .logo-name {
         color: #FFFFFF;
         padding-top: 15px;
+        padding-left: 15px;
         margin-bottom: 20px;
         font-family: var(--logo-ff);
         font-size: 20px;
         text-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
-        text-align: center;
+        text-align: start;
         z-index: 2;
         position: relative;
+    }
+
+    .burger {
+        position: absolute;
+        top: 20px;
+        right: 15px;
     }
 
     .hero-contents {
@@ -112,7 +119,7 @@ h2, h3, .date {
     .hero-heading-bottom {
         width: 50%;
         max-width: 150px;
-        margin: -40px auto 0px auto;
+        margin: -20px auto 0px auto;
         z-index: 2;
     }
 
@@ -125,12 +132,12 @@ h2, h3, .date {
     }
     
     /* Position cards around the hero section */
-    .day1 { top: 10px; left: -30px; }
-    .day2 { top: 10px; right: -30px; }
-    .day3 { top: 40%; right: -40px; }
-    .day4 { bottom: 30%; left: -40px; }
-    .day5 { bottom: 10%; left: 50%; transform: translateX(-50%) scale(0.6); }
-    .day6 { bottom: 10%; right: -30px; }
+    .day1 { top: 10px; left: -30px; display: none;}
+    .day2 { top: 10px; right: -30px; display: none;}
+    .day3 { top: 40%; right: -40px; display: none;}
+    .day4 { bottom: 30%; left: -40px; display: none;}
+    .day5 { bottom: 10%; left: 50%; transform: translateX(-50%) scale(0.6); display: none;}
+    .day6 { bottom: 10%; right: -30px; display: none;}
 
     .day-tag {
         width: 100px;
