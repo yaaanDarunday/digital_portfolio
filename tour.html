@@ -16,15 +16,50 @@
 
 </head>
 <body>
+    <!-- Sticky Navigation -->
+    <nav class="sticky-nav" id="stickyNav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span>Stephanie Mei</span>
+            </div>
+            <div class="nav-links">
+                <a href="#first-day" class="nav-link">Day 1</a>
+                <a href="#second-day" class="nav-link">Day 2</a>
+                <a href="#third-day" class="nav-link">Day 3</a>
+                <a href="#fourth-day" class="nav-link">Day 4</a>
+                <a href="#fifth-sixth-day" class="nav-link">Day 5 & 6</a>
+                <a href="./index.html" class="nav-link portfolio-link">Portfolio</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay">
+        <div class="mobile-nav-content">
+            <div class="mobile-nav-header">
+                <span class="mobile-nav-logo">Stephanie Mei</span>
+                <button class="mobile-nav-close" id="mobileNavClose">&times;</button>
+            </div>
+            <div class="mobile-nav-links">
+                <a href="#first-day" class="mobile-nav-link">Day 1</a>
+                <a href="#second-day" class="mobile-nav-link">Day 2</a>
+                <a href="#third-day" class="mobile-nav-link">Day 3</a>
+                <a href="#fourth-day" class="mobile-nav-link">Day 4</a>
+                <a href="#fifth-sixth-day" class="mobile-nav-link">Day 5 & 6</a>
+                <a href="./index.html" class="mobile-nav-link portfolio-link">Portfolio</a>
+            </div>
+        </div>
+    </div>
+
     <div class="head"></div>
     <div class="main">
-        <div class="hero" style="position: relative;">
+        <div class="hero" style="position: relative; height: 100vh;">
             <div class="changing-bg"></div>
             <img src="./images/Star2.svg" alt="" style="width: 100px; position: absolute; top: 5px; right: 40px; z-index: 3;">
             <img src="./images/Star1.svg" alt="" style="width: 100px; position: absolute; top: 75px; right: -25px; transform: scaleX(-1); z-index: 3;">
             <img src="./images/background.svg" alt="" class="gradient-glass">
             <p class="logo-name">Stephanie Mei</p>
-            <img src="./images/burger.png" alt="" class="burger">
+            <img src="./images/burger.png" alt="" class="burger" id="burgerMenu" style="position: fixed;">
             <div class="hero-contents">
                 <a href="#first-day">
                     <div class="day1 photo-card">
@@ -167,7 +202,7 @@
             </div>
             <img src="./images/fourth-day-img1.svg" alt="" class="fourth-day-image1">
         </div>
-        <div id="fifth-sixth-day" class="fifth-six-day" style="position: relative; overflow: hidden;">
+        <div id="fifth-sixth-day" class="fifth-six-day section" style="position: relative; overflow: hidden;">
             <div class="fifth-top">
                 <div class="fifth-six-title">
                     <h2>DAY 5 & 6</h2>
@@ -196,6 +231,7 @@
             </div>
         </div>
     </div>
-    
+    <script src="./script.js"></script>
+
 </body>
 </html>
