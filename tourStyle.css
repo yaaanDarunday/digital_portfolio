@@ -1,3 +1,88 @@
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotateIn {
+    from {
+        opacity: 0;
+        transform: rotate(-10deg) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+    }
+}
+
 :root {
     --main-ff: "Montserrat", sans-serif;
     --logo-ff: 'Sarina', sans-serif;
@@ -33,6 +118,163 @@ html, body {
 
 h2, h3, .date {
     color: var(--primary-color);
+}
+
+/* Hero Section Animations */
+.logo-name {
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-heading-top {
+    animation: fadeInUp 1.2s ease-out 0.3s both;
+}
+
+.hero-heading-bottom {
+    animation: fadeInUp 1.2s ease-out 0.6s both;
+}
+
+/* Photo Cards Animations */
+
+.day1 { animation-delay: 0.2s; }
+.day2 { animation-delay: 0.4s; }
+.day3 { animation-delay: 0.6s; }
+.day4 { animation-delay: 0.8s; }
+.day5 { animation-delay: 1s; }
+.day6 { animation-delay: 1.2s; }
+
+/* Star Animations */
+.hero img[src*="Star"] {
+    animation: float 3s ease-in-out infinite;
+}
+
+.hero img[src*="Star1"] {
+    animation-delay: 0s;
+}
+
+.hero img[src*="Star2"] {
+    animation-delay: 1.5s;
+}
+
+/* Section Animations */
+.section {
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+/* First Day Animations */
+.first-day1 {
+    animation: fadeInLeft 1s ease-out 0.2s both;
+}
+
+.first-day2 {
+    animation: scaleIn 1s ease-out 0.4s both;
+}
+
+.first-day3 {
+    animation: fadeInRight 1s ease-out 0.6s both;
+}
+
+.first-day1 img, .first-day2 img, .first-day3 img {
+    transition: transform 0.3s ease;
+}
+
+.first-day1 img:hover, .first-day2 img:hover, .first-day3 img:hover {
+    transform: scale(1.05);
+}
+
+/* Second Day Animations */
+.second-day-left {
+    animation: fadeInLeft 1s ease-out 0.2s both;
+}
+
+.second-day-right {
+    animation: fadeInRight 1s ease-out 0.4s both;
+}
+
+/* Third Day Animations */
+.third-day-left {
+    animation: fadeInLeft 1s ease-out 0.2s both;
+}
+
+.third-day-right {
+    animation: fadeInRight 1s ease-out 0.4s both;
+}
+
+/* Fourth Day Animations */
+.fourth-day-text {
+    animation: fadeInLeft 1s ease-out 0.2s both;
+}
+
+.fourth-day-image1 {
+    animation: fadeInRight 1s ease-out 0.4s both;
+}
+
+.fourth-day-image2, .fourth-day-image3 {
+    animation: rotateIn 1s ease-out 0.6s both;
+}
+
+/* Fifth Day Animations */
+.fifth-six-title {
+    animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.fifth-bottom-left {
+    animation: fadeInLeft 1s ease-out 0.4s both;
+}
+
+.fifth-bottom-right {
+    animation: fadeInRight 1s ease-out 0.6s both;
+}
+
+.fifth-day-img1, .fifth-day-img2, .fifth-day-img3, .fifth-day-img4 {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.fifth-day-img1:hover, .fifth-day-img2:hover, .fifth-day-img3:hover, .fifth-day-img4:hover {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+
+/* Text Content Animations */
+.day-tag {
+    animation: pulse 2s ease-in-out infinite;
+    transition: all 0.3s ease;
+}
+
+.day-tag:hover {
+    transform: scale(1.1);
+    background-color: #FFB8A3;
+}
+
+/* Background Card Hover Effects */
+.first-day1 > p, .first-day3 > p, .second-day-left > p, .third-day-left > p, .day-four-context, .fifth-bottom-left > p {
+    transition: all 0.3s ease;
+}
+
+.first-day1 > p:hover, .first-day3 > p:hover, .second-day-left > p:hover, .third-day-left > p:hover, .day-four-context:hover, .fifth-bottom-left > p:hover {
+    background-color: #FFE8E8;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(93, 2, 70, 0.1);
+}
+
+/* Title Animations */
+h2, h3 {
+    transition: color 0.3s ease;
+}
+
+h2:hover, h3:hover {
+    color: #7A0356;
+}
+
+/* Scroll-triggered animations */
+@media (prefers-reduced-motion: no-preference) {
+    .section {
+        animation-play-state: paused;
+    }
+    
+    .section.animate {
+        animation-play-state: running;
+    }
 }
 
 /* Mobile Size (Default) */
@@ -391,6 +633,15 @@ h2, h3, .date {
         margin: 10px auto;
         object-fit: contain;
     }
+
+    /* Mobile specific animations */
+    .photo-card {
+        animation: none;
+    }
+    
+    .section {
+        animation: fadeInUp 0.8s ease-out both;
+    }
 }
 
 /* Tablet Size */
@@ -722,6 +973,11 @@ h2, h3, .date {
 
     .fifth-day-img1, .fifth-day-img2, .fifth-day-img3, .fifth-day-img4 {
         width: 200px;
+    }
+
+    /* Tablet specific animations */
+    .photo-card {
+        animation-duration: 0.6s;
     }
 }
 
