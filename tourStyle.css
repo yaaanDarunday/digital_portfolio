@@ -1762,6 +1762,10 @@ h2:hover, h3:hover {
     .mobile-nav-overlay {
         display: none;
     }
+
+   .burger {
+        display: none;
+   }
 }
 
 /* Hide sticky nav on mobile and tablet */
