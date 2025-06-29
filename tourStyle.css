@@ -162,7 +162,8 @@ h2, h3, .date {
 
 /* Section Animations */
 .section {
-   
+    opacity: 1;
+    animation: fadeInUp 1s ease-out forwards;
 }
 
 /* First Day Animations */
